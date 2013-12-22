@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(FILE.expand_path(File.dirname(__FILE__)) + '/../lib')
+
+require 'grandfather'
+
+if ARGV.flags.version?
+  puts "Version: #{Grandfather::VERSION}"
+  exit
+end
+
+config = Grandfather.configure do |config|
+end
+
+Grandfather.process! config
