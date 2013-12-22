@@ -5,6 +5,9 @@ require 'grandfather/config'
 require 'grandfather/md'
 require 'grandfather/combine'
 require 'grandfather/render'
+require 'grandfather/code'
+require 'grandfather/codeblock'
+require 'grandfather/wkhtmltopdf.rb'
 
 module Grandfather
 
