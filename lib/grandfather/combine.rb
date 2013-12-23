@@ -58,7 +58,7 @@ module Grandfather
 
     def output_dir
       output_dir = @config.output_dir.nil? ? Dir.getwd : @config.output_dir
-      FileUtils.mkdir_p*output_dir) unless ::File.directory?(output_dir)
+      FileUtils.mkdir_p*output_dir unless ::File.directory?(output_dir)
       output_dir
     end
 

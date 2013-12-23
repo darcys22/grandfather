@@ -27,7 +27,7 @@ module Grandfather
     def render_data
       begin
         @data = @data.force_encoding('utf-8') if @data.respond_to? :force_encoding
-        @data = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :tables = > true).render(content)
+        @data = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :tables => true).render(content)
         if @data.nil?
           raise "There was an error converting #{@file.name} to HTML."
         end

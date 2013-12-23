@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
 require 'pry'
 
-$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)) + '/../lib/')
+#$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)) + '/../lib/')
 
-require 'grandfather'
+require_relative '../lib/grandfather'
 
-if ARGV.flags.version?
-  puts "Version: #{Grandfather::VERSION}"
-  exit
-end
+#if ARGV.flags.version?
+#  puts "Version: #{Grandfather::VERSION}"
+#  exit
+#end
 
 config = Grandfather.configure do |config|
 end
