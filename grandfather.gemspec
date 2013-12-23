@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'RedCloth', '~> 4.2.7'
   spec.add_dependency 'coderay', '~> 1.0.7'
   spec.add_dependency 'nokogiri', '~> 1.5.5'
-  spec.add_dependency 'wkhtmltodpf-binary', '~> 0.9.9.1'
+  spec.add_dependency "wkhtmltopdf-binary", "~> 0.9.9.1"
   spec.add_dependency 'optiflag', '~> 0.7'
 
 
@@ -29,4 +29,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "pry"
 end
