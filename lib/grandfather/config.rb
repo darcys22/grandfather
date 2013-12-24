@@ -4,10 +4,11 @@ module Grandfather
 
   # Class for config params
   class Config
-    attr_accessor :output_filename
+    attr_accessor :output_filename, :file, :recursive, :wkhtmltopdf_parameters
 
     def initialize
       @output_filename = "Book.pdf"
+      @recursive = false
     end
   end
 end

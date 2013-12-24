@@ -10,7 +10,19 @@ module Grandfather
       @filename = filename
       extension = ::File.extname(@filename)
       @name = ::File.basename(@filename, extension)
+#      pry
       @data = ::File.open(@filename, 'rb' ) { |f| f.read } if ::File.exists?(@filename)
     end
+
+    def valid?
+      valid_format? @format
+    end
+
+    def valid_format?(format)
+      return false if format.nil?
+
+      format.to_sym == :md
+    end
+
   end
 end

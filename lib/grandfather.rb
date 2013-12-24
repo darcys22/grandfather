@@ -7,7 +7,8 @@ require 'grandfather/combine'
 require 'grandfather/render'
 require 'grandfather/code'
 require 'grandfather/codeblock'
-require 'grandfather/wkhtmltopdf.rb'
+require 'grandfather/wkhtmltopdf'
+require 'grandfather/path'
 
 module Grandfather
 
@@ -21,7 +22,7 @@ module Grandfather
   # Starts processing files
   def self.process!(config)
     @files = Path.list_valid(config.file, config.recursive).map { |file| Md.new(file) }
-    Combine.new(@files, config).render!
+    Combine.new(@files, config).combine!
   end
 end
 
