@@ -1,14 +1,14 @@
 # encoding: utf-8
 
-require 'grandfather/version'
-require 'grandfather/config'
-require 'grandfather/md'
-require 'grandfather/combine'
-require 'grandfather/render'
-require 'grandfather/code'
-require 'grandfather/codeblock'
-require 'grandfather/wkhtmltopdf'
-require 'grandfather/path'
+require_relative 'grandfather/version'
+require_relative 'grandfather/config'
+require_relative 'grandfather/md'
+require_relative 'grandfather/combine'
+require_relative 'grandfather/render'
+require_relative 'grandfather/code'
+require_relative 'grandfather/codeblock'
+require_relative 'grandfather/wkhtmltopdf'
+require_relative 'grandfather/path'
 
 module Grandfather
 
