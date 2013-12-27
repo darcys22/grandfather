@@ -21,6 +21,7 @@ module Grandfather
 
   # Starts processing files
   def self.process!(config)
+    byebug
     @files = Path.list_valid(config.file, config.recursive).map { |file| Md.new(file) }
     Combine.new(@files, config).combine!
   end
