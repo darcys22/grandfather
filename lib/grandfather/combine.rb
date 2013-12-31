@@ -16,8 +16,8 @@ module Grandfather
       merged_contents = []
       @files.each do |file|
         markup = Renderer.new file
-        merged_contents = markup.render
-        merged_contents << "<div class=\"page-break\"></div>#{html}"
+        merged_contents << markup.render
+        merged_contents << "<div class=\"page-break\"></div>"
       end
 
       unless merged_contents.empty?
