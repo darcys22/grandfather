@@ -15,7 +15,7 @@ module Grandfather
     def combine!
       merged_contents = []
       @files.each do |file|
-        markup = Render.new file
+        markup = Renderer.new file
         merged_contents = markup.render
         merged_contents << "<div class=\"page-break\"></div>#{html}"
       end

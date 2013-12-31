@@ -18,8 +18,6 @@ module Grandfather
       end
 
       @what = Dir.glob(target).select { |file| Md.new(file).valid? }
-      binding.pry
-      
     end
   end
 end
