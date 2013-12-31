@@ -22,7 +22,6 @@ module Grandfather
   # Starts processing files
   def self.process!(config)
     @files = Path.list_valid(config.file, config.recursive).map { |file| Md.new(file) }
-    binding.pry
     Combine.new(@files, config).combine!
   end
 end

@@ -9,7 +9,7 @@ module Grandfather
     def initialize(filename)
       @filename = filename
       @extension = ::File.extname(@filename)
-      @name = ::File.basename(@filename, extension)
+      @name = ::File.basename(@filename, @extension)
       @data = ::File.open(@filename, 'rb' ) { |f| f.read } if ::File.exists?(@filename)
     end
 
@@ -18,9 +18,12 @@ module Grandfather
     end
 
     def valid_format?(format)
-      return false if format.nil?
+      # All the files are missing extensions, if it has an extension it is wrong
+        # kinda hacky not happy with it
+      format.empty?
+      #return false if format.nil?
 
-      format.to_sym == :md
+      #format.to_sym == :md
     end
 
   end
