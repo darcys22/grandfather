@@ -17,7 +17,9 @@ module Grandfather
         end
       end
 
-      Dir.glob(target).select { |file| Md.new(file).valid? }
+      @what = Dir.glob(target).select { |file| Md.new(file).valid? }
+      binding.pry
+      
     end
   end
 end

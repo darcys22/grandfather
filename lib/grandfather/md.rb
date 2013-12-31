@@ -8,13 +8,13 @@ module Grandfather
 
     def initialize(filename)
       @filename = filename
-      extension = ::File.extname(@filename)
+      @extension = ::File.extname(@filename)
       @name = ::File.basename(@filename, extension)
       @data = ::File.open(@filename, 'rb' ) { |f| f.read } if ::File.exists?(@filename)
     end
 
     def valid?
-      valid_format? @filename
+      valid_format? @extension
     end
 
     def valid_format?(format)
