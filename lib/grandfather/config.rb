@@ -4,7 +4,7 @@ module Grandfather
 
   # Class for config params
   class Config
-    attr_accessor :output_filename, :file, :recursive, :wkhtmltopdf_parameters, :stylesheet
+    attr_accessor :output_filename, :file, :recursive, :wkhtmltopdf_parameters, :stylesheet, :output_dir
 
     def initialize
       @output_filename = "Book.pdf"
